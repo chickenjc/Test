@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lập Trình Web</title>
+	<script>
+		function add_child(){
+			var p = document.getElementById("kq");	
+			for(var i = 30; i <= 300; i++){
+				var node;
+				if(i % 7 == 0 && i % 13 == 0){
+					node = document.createTextNode("a-z \t");
+					p.appendChild(node);
+				}
+				else if(i % 7 == 0){
+					node = document.createTextNode("abc \t");
+					p.appendChild(node);
+				}
+				else if(i % 13 == 0){
+					node = document.createTextNode("xyz \t");
+					p.appendChild(node);
+				}
+				else{
+					node = document.createTextNode(i + "\t");
+					p.appendChild(node);
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+    <button onclick="add_child()">Thực hiện</button>
+	
+	<p id = "kq">Kết quả: </p>
+</body>
+</html>
+
+
+
